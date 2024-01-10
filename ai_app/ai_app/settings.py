@@ -31,8 +31,8 @@ SECRET_KEY = 'k=-0d_2#s%nszop2pj(uhlvi#=f8it3zaio*9dq455t16-^cu#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['92.205.19.188', 'ai.farai-chakarisa.co.za']
 
 # Application definition
 
