@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 STATIC_URL='/static/'
-STATIC_ROOT='/var/www/html/ai_project/ai_app/static/'
+STATIC_ROOT=os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media/')
@@ -31,7 +31,7 @@ SECRET_KEY = 'k=-0d_2#s%nszop2pj(uhlvi#=f8it3zaio*9dq455t16-^cu#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['92.205.19.188', 'ai.farai-chakarisa.co.za']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'booking'
 ]
 
 MIDDLEWARE = [
@@ -78,6 +79,19 @@ WSGI_APPLICATION = 'ai_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+# 	'ENGINE': 'django.db.backends.mysql',
+# 	'NAME': 'django',
+# 	'USER': 'root',
+# 	'PASSWORD': '',
+# 	'HOST': '127.0.0.1',
+# 	'PORT' : '3306',
+#     'TEST': {
+#         'NAME': 'test_django',
+#     },
+# }
 
 DATABASES = {
     'default': {
